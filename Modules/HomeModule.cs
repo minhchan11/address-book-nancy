@@ -22,6 +22,10 @@ namespace MyAddressBook
         List<Contact> allContacts = Contact.GetList();
         return View["contacts.cshtml",allContacts];
       }
+      Get["/contacts/{id}"] = parameters => {
+        Contact userEntry = Contact.Find(parameters.id);
+        return View["/contact.cshtml",userEntry];
+      }
     }
   }
 }
