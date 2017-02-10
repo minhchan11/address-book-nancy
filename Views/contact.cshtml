@@ -1,15 +1,20 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
 <h1>You have created an entry in your Address Book</h1>
-<h3>@Model.GetName()</h3>
-<h4>Phone Number: @Model.GetDetail().GetPhone()</h4>
-<h4>Email: @Model.GetDetail().GetEmail()</h4>
-<h5>Street address: @Model.GetDetail().GetAddress().GetStreet()</h5>
-<h5>City: @Model.GetDetail().GetAddress().GetCity()</h5>
-<h5>State: @Model.GetDetail().GetAddress().GetState()</h5>
+<div class="well">
+  <h3>@Model.GetName()</h3>
+  <h4>Phone Number: @Model.GetDetail().GetPhone()</h4>
+  <h4>Email: @Model.GetDetail().GetEmail()</h4>
+  <h5>Street address: @Model.GetDetail().GetAddress().GetStreet()</h5>
+  <h5>City: @Model.GetDetail().GetAddress().GetCity()</h5>
+  <h5>State: @Model.GetDetail().GetAddress().GetState()</h5>
+</div>
 
-<p><a href="/contact_form">Click here to create new contact</a></p>
-<p><a href="/contacts">Go back to your Address Book</a></p>
-<p><a href="/">Home Page</a></p>
+<p><a href="/contact_form" class="btn btn-md btn-success">Click here to create new contact</a></p>
+<p><a href="/contacts" class="btn btn-md btn-info">Go back to your Address Book</a></p>
+<p><a href="/" class="btn btn-md btn-warning">Home Page</a></p>
 
 <form action="/contact_cleared/@Model.GetId()" method="post">
-<button type="submit" name="button">Remove this entry from your Address Book</button>
+<button type="submit" class="btn btn-danger btn-lg">Remove this entry from your Address Book</button>
 </form>

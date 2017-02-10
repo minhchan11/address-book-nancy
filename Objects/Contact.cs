@@ -79,7 +79,7 @@ namespace AddressBook.Objects
     {
       return _instances[0];
     }
-    
+
     public static void ClearOne(int searchIdclear)
     {
       _instances.RemoveAt(searchIdclear-1);
