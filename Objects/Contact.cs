@@ -38,5 +38,14 @@ namespace AddressBook.Objects
     {
       _id = inputId;
     }
+
+    public Detail GetDetail()
+    {
+      return _detail;
+    }
+    public void SetDetail(Detail inputDetail)
+    {
+      _detail = inputDetail;
+    }
   }
 }
