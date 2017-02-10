@@ -11,6 +11,11 @@ namespace MyAddressBook
     {
       Get["/"] = _ => View["index.cshtml"];
       Get["/contact_form"] = _ => View["contact_form.cshtml"];
+      Post["/contacts"] = _ => {
+        Address userAddress = new Address(Request.Form["street"], Request.Form["city"], Request.Form["state"]);
+        Detail userDetail = new Detail(Request.Form["phone"], Request.Form["email"],userAddress);
+        Contact userContact = new Contact(Request.Form["name"],userDetail);
+      }
     }
   }
 }
