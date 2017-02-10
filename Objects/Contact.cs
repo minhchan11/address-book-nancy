@@ -11,5 +11,11 @@ namespace AddressBook.Objects
 
     private static List<Contact> _instances = new List<Contact>{};
     private static int idCounter = 1;
+
+    public Contact (string name, Detail detail)
+    {
+      _name = name;
+      _detail = detail;
+    }
   }
 }
