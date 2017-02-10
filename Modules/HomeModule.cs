@@ -30,6 +30,10 @@ namespace MyAddressBook
         Contact.ClearOne(parameters.id);
         return View["contact_cleared.cshtml"];
       };
+      Post["/contacts_cleared"] = _ => {
+        Place.ClearAll();
+        return View["/contacts_cleared.cshtml"];
+      }
     }
   }
 }
