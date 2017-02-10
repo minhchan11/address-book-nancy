@@ -7,4 +7,9 @@
 <h5>State: @Model.GetDetail().GetAddress().GetState()</h5>
 
 <p><a href="/contact_form">Click here to create new contact</a></p>
+<p><a href="/contacts">Go back to your Address Book</a></p>
 <p><a href="/">Home Page</a></p>
+
+<form action="/contact_cleared/@Model.GetId()" method="post">
+<button type="submit" name="button">Remove this entry from your Address Book</button>
+</form>
