@@ -21,11 +21,15 @@ namespace MyAddressBook
         Contact userContact = new Contact(Request.Form["name"],userDetail);
         List<Contact> allContacts = Contact.GetList();
         return View["contacts.cshtml",allContacts];
-      }
+      };
       Get["/contacts/{id}"] = parameters => {
         Contact userEntry = Contact.Find(parameters.id);
-        return View["/contact.cshtml",userEntry];
-      }
+        return View["contact.cshtml",userEntry];
+      };
+      Post["/contact_cleared/{id}"] = parameters => {
+        Contact.ClearOne(parameters.id);
+        return View["contact_cleared.cshtml"];
+      };
     }
   }
 }
