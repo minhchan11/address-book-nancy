@@ -30,5 +30,14 @@ namespace AddressBook.Objects
     {
       _city = inputCity;
     }
+
+    public string GetState()
+    {
+      return _state;
+    }
+    public void SetState(string inputState)
+    {
+      _state = inputState;
+    }
   }
 }
