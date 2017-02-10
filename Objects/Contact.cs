@@ -16,6 +16,9 @@ namespace AddressBook.Objects
     {
       _name = name;
       _detail = detail;
+      _id = idCounter;
+      idCounter++;
+      _instances.add(This);
     }
   }
 }
