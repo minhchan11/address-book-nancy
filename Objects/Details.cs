@@ -12,5 +12,14 @@ namespace AddressBook.Objects
       _phoneNumber = phoneNumber;
       _email = email;
     }
+
+    public string GetAddress()
+    {
+      return _address;
+    }
+    public void SetAddress(string inputAddress)
+    {
+      _address = inputAddress;
+    }
   }
 }
