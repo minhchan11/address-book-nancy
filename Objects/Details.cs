@@ -30,5 +30,14 @@ namespace AddressBook.Objects
     {
       _phone = inputPhone;
     }
+
+    public string GetEmail()
+    {
+      return _email;
+    }
+    public void SetEmail(string inputEmail)
+    {
+      return _email = inputEmail;
+    }
   }
 }
