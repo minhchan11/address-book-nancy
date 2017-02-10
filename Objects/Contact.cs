@@ -58,6 +58,28 @@ namespace AddressBook.Objects
       return _instances[searchId -1];
     }
 
+    public static List<Contact> SearchList(string searchName)
+    {
+      List<Contact> searchResult = new List<Contact>{};
+      foreach (Contact inputContact in _instances)
+      {
+        if (inputContact._name == searchName)
+        {
+          searchResult.Add(inputContact);
+        }
+        else
+        {
+          return null;
+        }
+      }
+      return searchResult;
+    }
+
+    public static Contact SearchResult()
+    {
+      return _instances[0];
+    }
+    
     public static void ClearOne(int searchIdclear)
     {
       _instances.RemoveAt(searchIdclear-1);

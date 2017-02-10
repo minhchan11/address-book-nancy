@@ -34,6 +34,17 @@ namespace MyAddressBook
         Contact.ClearAll();
         return View["/contacts_cleared.cshtml"];
       };
+      Get["/contact_search_form"] = _ => {
+        return View["/contact_search_form.cshtml"];
+      };
+      Post["/contact_search"] = _ => {
+        List<Contact> allContacts = Contact.GetList();
+        string userSearch = Request.Form["search"];
+        List<Contact> foundContactList = Contact.SearchList(userSearch);
+        foundContactList = Contact.GetList();
+        Contact foundContact = Contact.SearchResult();
+        return View ["/contact_search.cshtml", foundContact];
+      };
     }
   }
 }

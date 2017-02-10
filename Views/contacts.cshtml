@@ -1,15 +1,24 @@
 <h1 class="jumbotron">Your AddressBook</h1>
 <div class="well">
-  <ul>
-    @foreach (var entry in Model)
-    {
-      int entryId = @Model.IndexOf(@entry) + 1;
-      <li><a href="/contacts/@entryId"> @entry.GetName() </a></li>
-    }
-  </ul>
+
+  @if (@Model.Count == 0)
+  {
+    <h4> Your Address Book is empty </h4>
+  }
+  else
+  {
+    <ul>
+          @foreach (var entry in Model)
+          {
+            int entryId = @Model.IndexOf(@entry) + 1;
+            <li><a href="/contacts/@entryId"> @entry.GetName() </a></li>
+          }
+    </ul>
+  }
+
 </div>
 <p><a href="/contact_form">Click here to create new contact</a></p>
 <p><a href="/">Home Page</a></p>
 <form action="/contacts_cleared" method="post">
-  <button type="submit">Clear akk entries in your address book</button>
+  <button type="submit">Clear all entries in your address book</button>
 </form>
