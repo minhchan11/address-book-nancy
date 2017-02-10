@@ -10,6 +10,10 @@ namespace MyAddressBook
     public HomeModule()
     {
       Get["/"] = _ => View["index.cshtml"];
+      Get["/contacts"] = _ => {
+        List<Contact> allContacts = Contact.GetList();
+        return View["contacts.cshtml",allContacts];
+      }
       Get["/contact_form"] = _ => View["contact_form.cshtml"];
       Post["/contacts"] = _ => {
         Address userAddress = new Address(Request.Form["street"], Request.Form["city"], Request.Form["state"]);
