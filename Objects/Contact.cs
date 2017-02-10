@@ -29,5 +29,14 @@ namespace AddressBook.Objects
     {
       _name = inputName;
     }
+
+    public int GetId()
+    {
+      return _id;
+    }
+    public void SetId(int inputId)
+    {
+      _id = inputId;
+    }
   }
 }
