@@ -4,12 +4,19 @@
   <meta charset="utf-8">
   <title>Address Book</title>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
   <link rel="stylesheet" href="~/Content/css/styles.css" type="text/css">
 </head>
 <body>
   <div class="container">
-    @RenderBody()
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+          @RenderBody()
+          @Html.Partial("footer.cshtml")
+      </div>
+      <div class="col-md-2"></div>
+    </div>
   </div>
 </body>
 </html>

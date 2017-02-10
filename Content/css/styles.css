@@ -1,9 +1,9 @@
 body {
-  font-family: font-family: 'Slabo 27px', serif;
+  font-family: 'Varela Round', sans-serif;
   color: #626c7c;
   height: 100vh;
   width: 100vh;
-  background: -webkit-linear-gradient(-45deg, #ffffff 0%,#cccccc 100%);
+  background-image: url(../img/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -18,4 +18,12 @@ body {
   -webkit-border-radius: 33px 33px 33px 33px;
   border: 0px none #ffffff;
   background-color: #aad8e0;
+}
+
+.footer {
+  position: fixed;
+  left: 60%;
+  bottom: 5%;
+  font-size: 30px;
+  opacity: 0.6;
 }
