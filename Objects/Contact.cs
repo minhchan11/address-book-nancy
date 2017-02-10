@@ -52,5 +52,15 @@ namespace AddressBook.Objects
     {
       return _instances[searchId -1];
     }
+
+    public static void ClearOne(int searchIdclear)
+    {
+      _instances.RemoveAt(searchIdclear-1);
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
   }
 }
