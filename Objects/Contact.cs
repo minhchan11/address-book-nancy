@@ -8,5 +8,8 @@ namespace AddressBook.Objects
     private string _name;
     private int _id;
     private Detail _detail;
+
+    private static List<Contact> _instances = new List<Contact>{};
+    private static int idCounter = 1;
   }
 }
