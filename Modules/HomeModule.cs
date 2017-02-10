@@ -10,6 +10,7 @@ namespace MyAddressBook
     public HomeModule()
     {
       Get["/"] = _ => View["index.cshtml"];
+      Get["/contact_form"] = _ => View["contact_form.cshtml"];
     }
   }
 }
