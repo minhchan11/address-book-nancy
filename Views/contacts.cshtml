@@ -1,0 +1,14 @@
+<h1 class="jumbotron">Your AddressBook</h1>
+<div class="well">
+  <ul>
+    @foreach (var entry in Model)
+    {
+      int entryId = @Model.Indexof(@entry) + 1;
+      <li><a href="/contact/@entry"> @entry.GetName() </a></li>
+    }
+  </ul>
+</div>
+<p><a href="/contact_form">Click here to create new contact</a></p>
+<form action="/contact_cleared" method="post">
+  <button type="submit">Clear all contacts</button>
+</form>
