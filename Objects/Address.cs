@@ -22,6 +22,13 @@ namespace AddressBook.Objects
       _street = inputStreet;
     }
 
-
+    public string GetCity()
+    {
+      return _city;
+    }
+    public void SetCity(string inputCity)
+    {
+      _city = inputCity;
+    }
   }
 }
