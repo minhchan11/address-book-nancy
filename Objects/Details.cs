@@ -2,22 +2,22 @@ namespace AddressBook.Objects
 {
   public class Detail
   {
-    private string _address;
+    private Address _address;
     private string _phone;
     private string _email;
 
-    public Detail(string address, string phone, string email)
+    public Detail(Address address, string phone, string email)
     {
       _address = address;
       _phone = phone;
       _email = email;
     }
 
-    public string GetAddress()
+    public Address GetAddress()
     {
       return _address;
     }
-    public void SetAddress(string inputAddress)
+    public void SetAddress(Address inputAddress)
     {
       _address = inputAddress;
     }
