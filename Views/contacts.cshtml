@@ -3,8 +3,8 @@
   <ul>
     @foreach (var entry in Model)
     {
-      int entryId = @Model.Indexof(@entry) + 1;
-      <li><a href="/contacts/@entry"> @entry.GetName() </a></li>
+      int entryId = @Model.IndexOf(@entry) + 1;
+      <li><a href="/contacts/@entryId"> @entry.GetName() </a></li>
     }
   </ul>
 </div>

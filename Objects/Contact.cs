@@ -18,7 +18,7 @@ namespace AddressBook.Objects
       _detail = detail;
       _id = idCounter;
       idCounter++;
-      _instances.add(This);
+      _instances.Add(this);
     }
 
     public string GetName()

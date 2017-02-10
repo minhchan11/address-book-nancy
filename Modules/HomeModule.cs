@@ -13,7 +13,7 @@ namespace MyAddressBook
       Get["/contacts"] = _ => {
         List<Contact> allContacts = Contact.GetList();
         return View["contacts.cshtml",allContacts];
-      }
+      };
       Get["/contact_form"] = _ => View["contact_form.cshtml"];
       Post["/contacts"] = _ => {
         Address userAddress = new Address(Request.Form["street"], Request.Form["city"], Request.Form["state"]);
@@ -31,9 +31,9 @@ namespace MyAddressBook
         return View["contact_cleared.cshtml"];
       };
       Post["/contacts_cleared"] = _ => {
-        Place.ClearAll();
+        Contact.ClearAll();
         return View["/contacts_cleared.cshtml"];
-      }
+      };
     }
   }
 }

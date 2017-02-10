@@ -28,7 +28,7 @@ namespace AddressBook.Objects
     }
     public void SetEmail(string inputEmail)
     {
-      return _email = inputEmail;
+      _email = inputEmail;
     }
 
     public Address GetAddress()
