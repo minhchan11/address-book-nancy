@@ -9,7 +9,10 @@ body {
 }
 
 .jumbotron {
-  background-color: rgba(206, 234, 204,0.5)
+  background-color: rgba(252, 161, 203,0.5);
+  font-size:40px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .well {
